@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+
+    <link rel="shortcut icon" href="../imagens/unifavicon.ico" type="image/x-icon">
+
+    <title>Formulário de inscrição</title>
+    
+</head>
+
+<body>
+    
+   <!--Campos do formulário-->
+
+    <form name="formulariocadastro" action="#" method="post" onsubmit="alert('Formulário enviado com sucesso! Dados não foram realmente enviados.'); this.reset(); return false;" required>
+
+        
+
+        <!--Imagem da logo-->
+        <img src="../imagens/logounisuam.png" alt="Logo da unisuam">
+
+
+        <!--Título-->
+        <header class="tituloform">
+            <h1>Formulário de inscrição</h1>
+            <br>
+        </header>
+
+        <!--Sessão de informações especiais-->
+        <section class="informacoespessoais">
+
+            <header class="titulo1">
+               <h1>Informações pessoais</h1>
+               <br>
+            </header>
+
+            <p><label>Nome</label><p>
+            <input type="text" size="40"  required>
+            
+        
+            <p><label>Sobrenome</label></p>
+            <input type="text" size="40" required>
+            
+
+            <p><label>E-mail</label></p>
+            <input type="text" size="40" id="E-mail" required>
+
+            <p><label>Senha:</label></p>
+            <input type="password" size="40" id="Senha" maxlength="10" minlength="6" required>
+            
+            <p><label>Confirmação de senha</label></p>
+            <input type="password" size="40"  class="input-container" maxlength="10" minlength="6" required>
+            <br>
+            <br>
+            <br>
+        </section>
+
+
+
+        <!--Sessão de informações de contato-->
+        <section class="contato">
+
+            <header class="titulo2">
+                <h1>Informações de contato</h1>
+                <br>
+            </header>
+
+            <p><label>Telefone:</label></p>
+            <input type="text" size="1" maxlength="2" placeholder="+DD"><input type="text" size="29" name="Telefone" required placeholder="9999-9999">
+        
+            <p><label>Endereço:</label></p>
+            <input type="text" size="40" name="Endereco" required>
+
+            <p><label>Cidade:</label></p>
+            <input type="text" size="40" name="Cidade" required>
+
+            <p><label>Estado:</label></p>
+            <input type="text" size="40" name="Estado" required>
+
+            <p><label>CEP:</label></p>
+            <input type="text" size="40" name="CEP" required>
+            <br>
+            <br>
+            <br>
+    
+        </section>
+
+
+
+        <!--Sessão de interesses acadêmicos-->
+        <section class="interessesacademicos">
+
+
+            <header class="titulo3">
+                <h1>Interesses acadêmicos</h1>
+                <br>
+            </header>
+
+
+            <h3><p><label>Marque algum curso de interesse:</label></p></h3>
+            <br>
+            <br>
+
+            <section class="opcoes">
+                <input type="checkbox" value="Administração">
+                <label class="cursos">Administração</label>
+                <br>
+                <input type="checkbox" class="cursos" value="Arquitetura e urbanismo">
+                <label>Arquitetura e Urbanismo</label>
+                <br>
+                <input type="checkbox" class="cursos" value="Bacharelado em Educação Física">
+                <label>Bacharelado em Educação Física</label>
+                <br>
+                <input type="checkbox" class="cursos" value="Bacharelado em Medicina Veterinária">
+                <label>Bacharelado em Medicina Veterinária</label>
+                <br>
+                <input type="checkbox" value="Ciências Contábeis">
+                <label>Ciências Contábeis</label>
+                <br>
+                <input type="checkbox" value="Direito">
+                <label>Direito</label>
+                <br>
+                <input type="checkbox" value="Enfermagem">
+                <label>Enfermagem</label>
+                <br>
+                <input type="checkbox" value="Engenharia Civil">
+                <label>Engenharia Civil</label>
+                <br>
+                <input type="checkbox" value="Engenharia de Produção">
+                <label>Engenharia de Produção</label>
+                <br>
+                <input type="checkbox" value="Engenharia Elétrica">
+                <label>Engenharia Elétrica</label>
+                <br>
+                <input type="checkbox" value="Engenharia Mecânica">
+                <label>Engenharia Mecânica</label>
+                <br>
+                <input type="checkbox" value="Farmácia">
+                <label>Farmácia</label>
+                <br>
+                <input type="checkbox" value="Fisioterapia">
+                <label>Fisioterapia</label>
+                <br>
+                <input type="checkbox" value="Jornalismo">
+                <label>Jornalismo</label>
+                <br>
+                <input type="checkbox" value="Licenciatura em Educação Física">
+                <label>Licenciatura em Educação Física</label>
+                <br>
+                <input type="checkbox" value="Nutrição">
+                <label>Nutrição</label>
+                <br>
+                <input type="checkbox" value="Odontologia">
+                <label>Odontologia</label>
+                <br>
+                <input type="checkbox" value="Psicologia">
+                <label>Psicologia</label>
+                <br>
+                <input type="checkbox" value="Publicidade e Propaganda">
+                <label>Publicidade e Propaganda</label>
+                <br>
+                <input type="checkbox" value="Superior de Tecnologia em Análise e Desenvolvimento de Sistemas">
+                <label>Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</label>
+                <br>
+                <input type="checkbox" value="Superior de Tecnologia em Design de Interiores">
+                <label>Superior de Tecnologia em Design de Interiores</label>
+                <br>
+                <input type="checkbox" value="Superior de Tecnologia em Design Gráfico">
+                <label>Superior de Tecnologia em Design Gráfico</label>
+                <br>
+                <input type="checkbox" value="Superior de Tecnologia em Estética e Cosmética">
+                <label>Superior de Tecnologia em Estética e Cosmética</label>
+                <br>
+                <input type="checkbox" value="Superior de Tecnologia em Gastronomia">
+                <label>Superior de Tecnologia em Gastronomia</label>
+                <br>
+                <input type="checkbox" value="Superior de Tecnologia em Gestão da Tecnologia da Informação">
+                <label>Superior de Tecnologia em Gestão da Tecnologia da Informação</label>
+                <br>
+                <input type="checkbox" value="Superior de Tecnologia em Gestão de Recursos Humanos">
+                <label>Superior de Tecnologia em Gestão de Recursos Humanos</label>
+                <br>
+                <input type="checkbox" value="Superior de Tecnologia em Logística">
+                <label>Superior de Tecnologia em Logística</label>
+                <br>
+                <input type="checkbox" value="Superior de Tecnologia em Marketing">
+                <label>Superior de Tecnologia em Marketing</label>
+                <br>
+                <input type="checkbox" value="Terapia Ocupacional">
+                <label>Terapia Ocupacional</label>
+                <br>
+                <br>
+                <br>
+            </section> 
+            
+            
+
+            <section class="form-section">
+                <h3><p><label>Semestre de ingresso:</label></p></h3>
+                <select id="semestredeingresso">
+                    <option>2025.1</option>
+                    <option>2025.2</option>
+                </select>
+            
+                <h3><p><label>Modalidade:</label></p></h3>
+                <select id="modalidade" required>
+                    <option>Presencial</option>
+                    <option>100% digital</option>
+                </select>
+            </section>
+
+        </section>
+
+
+
+
+        <!--Sessão de experiência profissional-->
+        <section class="experienciaprofissional">
+
+            <header class="titulo4">
+                <h1>Experiência profissional</h1>
+            
+            </header>
+
+            
+            <p><input type="checkbox" class="caixinhadeexperiencia">
+           <label>Não possuo experiência profissional</label></p>
+            <br>
+            <p><label>Empresa</label></p>
+            <input type="text" size="40" id="Empresa" >
+        
+            <p><label>Cargo:</label></p>
+            <input type="text" size="40" id="Cargo" >
+
+            <section class="lado-a-lado">
+                <p><label>Data de início:</label></p>
+                <input type="date" size="40" id="datainicio" >
+
+                <p><label>Data de término:</label></p>
+                <input type="date" size="40" id="datatermino" >
+                <br>
+                <br>
+            </section>
+
+        </section>
+
+       
+        <!--Sessão de comentários-->
+        <section class="comentarios">
+
+            <header class="titulo5">
+                <h1>Comentários</h1>
+            </header>
+
+            <p>Deseja comentar ou sugerir algo para nós?<br />
+            Faça-o aqui embaixo!</p>
+
+            <textarea placeholder="Insira um comentário ou sugestão" rows="8" cols="40" maxlength="150">
+            </textarea>
+    
+        </section>
+
+        <!--Botões de enviar e limpar-->
+        <section class="botoes">
+            <br>
+            <button type="submit">Enviar</button> <button type="reset">Limpar</button>
+        </section>
+
+  
+      <footer class="rodape">
+            <p>Ao enviar o formulário você concorda com a Política de Privacidade da UNISUAM.
+            Acesse a Política de Privacidade da UNISUAM <a href="https://www.unisuam.edu.br/wp-content/uploads/2021/05/POLITICA-DE-PRIVACIDADE-UNISUAM.pdf?pageUrl=https%3A%2F%2Fhs.unisuam.edu.br%2Fvip-unisuam&pageTitle=Lista+VIP+25.1&referrer=&userAgent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F129.0.0.0+Safari%2F537.36&hutk=22016057dd02a50af825375bde1163eb&hssc=184940278.3.1728223927499&hstc=184940278.22016057dd02a50af825375bde1163eb.1726749676212.1727644994784.1728223927499.3&pageId=177991668780&analyticsPageId=177991668780&hsfp=1165085301&canonicalUrl=https%3A%2F%2Fhs.unisuam.edu.br%2Fvip-unisuam&contentType=landing-page">aqui</a></p>
+      </footer>
+
+
+    </form>
+
+</body>
+</html>
