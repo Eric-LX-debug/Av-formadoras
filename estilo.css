@@ -1,0 +1,183 @@
+*  {
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+
+/*Imagem de fundo*/
+body {
+    background-image:url('../imagens/fundounisuam2.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+/*Imagem da logo*/
+img{
+    height: 100px;
+    
+    padding-top: 40px;
+
+
+}
+
+
+/*cor nos campos input, button e textarea*/
+input:hover, button:hover, select:hover, textarea:hover { /*Ativa borda e sombra ao passar o mouse*/
+    border: 2px solid rgb(255, 166, 0);
+    box-shadow: 1px 1px 2px rgb(175, 40, 40);
+}
+
+
+
+/*Formulário*/
+form{
+    
+    width: 800px;
+    height: 3500px;
+    background-color: #FFFFFF;
+    margin-left: 390px;
+    border-radius: 30px;
+    text-align: center;
+
+    
+
+
+}
+
+
+/*Títulos*/
+.tituloform, .titulo1, .titulo2, .titulo3, .titulo4, .titulo5{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #eb7f0a;
+    
+
+}
+
+/*Arredondamento das bordas dos campos e alinhamento no centro*/
+input {
+    border-radius: 15px;
+    height: 16px;
+    padding: 10px;
+    margin-left: 20px;
+    text-indent: 10px;
+    
+}
+
+label{
+    margin-left: 20px;
+
+}
+
+
+.informacoespessoais{
+    color:#0b3b5b;
+    margin-right: 38px;
+   
+
+}
+
+
+
+/*Sessão de interesses acadêmicos*/    
+.interessesacademicos {
+    
+    color:#0c0e0c;
+
+}
+
+/* Alinha o checkbox com o meio do texto */
+.opcoes {
+    color:#0c0e0c;;  
+    vertical-align: middle; 
+    text-align: left;
+    padding-left: 20%;
+}
+
+.cursos{
+    text-align: left;
+    
+
+}
+
+
+.form-section {
+    display: flex;
+    gap: 20px; /* Espaço entre os campos */
+    align-items: center; /* Alinha os elementos na mesma linha */
+    margin-top: 80px;
+    margin-bottom: 90px;
+    margin-left: 120px;
+}
+
+.experienciaprofissional{
+    text-align: center;
+
+
+}
+
+.lado-a-lado {
+    display: flex;
+    gap: 5 px; /* Espaço entre os campos */
+    align-items: center; /* Alinha os elementos na mesma linha */
+    margin-top: 80px;
+    margin-bottom: 90px;
+    margin-left: 50px;
+
+
+}
+
+
+select {
+    background-color: #eb7f0a; /* Cor de fundo da caixa de seleção */
+    color: #ffffff; /* Cor do texto */
+    border: 1px solid #ffffff; /* Estilo da borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    appearance: none; /* Remove o estilo padrão do navegador */
+    -webkit-appearance: none; /* Remove o estilo padrão no Webkit */
+    -moz-appearance: none; /* Remove o estilo padrão no Firefox */
+}
+
+button {
+    background-color:#eb7f0a;
+    border: 1px solid #c95f18; /* Estilo da borda */
+    padding: 20px;border-radius: 5px;
+    margin-right: 40px;
+    
+
+
+}
+
+footer{
+    margin-top: 80px;
+
+
+}
+
+
+p{
+    color:#1a434b;
+
+}
+
+.contato{
+    margin-right: 38px;
+
+
+}
+
+/*Tela responsiva*/
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    button {
+        width: 100%; /* Botões ocupam 100% em telas menores */
+        margin-bottom: 10px;
+    }
+}
