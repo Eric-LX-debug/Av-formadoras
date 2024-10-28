@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+   
+</head>
+<body>
+
+    <!-- Uma div pai, que comporta duas divs filhas, onde, uma exibe a imagem, e a outra o formulário -->
+    <div class="container">
+
+        <!--div da imagem-->
+        <div class="imagem"> 
+            <img src="../IMAGEM/design-responsivo.png" alt="Imagem do do undraw.ico">
+        </div>
+
+        <!--Div dos formulários -->
+        <div class="form"> 
+            <form action="#" onsubmit="return validarForm(event)">
+                <div class="cabecalho">
+                    <div class="titulo">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                </div>
+
+                <div class="grupo-input">
+                    <div class="caixa-input">
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" name="nome" placeholder="Digite seu nome completo" >
+                    </div>
+
+                    <div class="caixa-input">
+                        <label for="Idade">Idade </label>
+                        <input id="Idade" type="text" name="Idade" placeholder="Digite sua idade" >
+                    </div>
+
+                    <div class="caixa-input">
+                        <label for="endereco">Endereço </label>
+                        <input id="endereco" type="text" name="endereco" placeholder="Digite seu endereço completo">
+                    </div>
+
+                    <div class="caixa-input">
+                        <label for="email">E-mail </label>
+                        <input id="email" type="text" name="email" placeholder="Digite seu melhor e-mail">
+                    </div>
+
+                    <div class="caixa-input">
+                        <label for="login">Login </label>
+                        <input id="login" type="text" name="login" placeholder="Crie um login">
+                    </div>
+
+                    <div class="caixa-input">
+                        <label for="senha">Senha </label>
+                        <input id="senha" type="password" name="senha" placeholder="Crie uma senha">
+                    </div>
+
+                    <div class="caixa-input">
+                        <label for="confirmasenha">Confirme a senha </label>
+                        <input id="confirmasenha" type="password" name="confirmasenha" placeholder="Confirme a senha">
+                    </div>
+                </div>
+
+                
+                <div class="botao-continuar">
+                    <button id="botao-continuar"><a href="#">Continuar</a></button> <!--Colocar o link para se aberto no javascript-->
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../JAVASCRIPT/validacao_campos.js"></script>
+</body>
+</html>
