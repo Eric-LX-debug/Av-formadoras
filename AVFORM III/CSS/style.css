@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Open Sans'; /*Importei a fonte, colocando o nome dela, que aparece no google e o link acima*/
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* centraliza os itens no meio */
+    align-items: center; 
+    justify-content: center;
+    background: rgb(3, 50, 68);
+}
+/* Conteúdo de todas as 2 divs */
+.container {
+    margin: 50px;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
+
+.imagem {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(7, 67, 136);
+}
+
+/* para diminuir a imagem */
+.imagem img {
+    width: 31rem; 
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Serve para deixar um item abaixo do outro, ao invés do lado */
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.cabecalho {
+    margin-bottom: 1rem;
+    display: flex;
+    padding: 1rem 3rem;
+    justify-content: center;
+}
+
+/* Risquinho abaixo do cadastre-se */
+.titulo h1::after {
+    content:'';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color:  rgb(7, 67, 136) ;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+
+}
+
+/* deixa o grupo dos campos input um ao lado do outro */
+.grupo-input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 3rem; 
+}
+
+/* deixa o label dos inputs acima do campo, e não ao lado  */
+.caixa-input {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.caixa-input input {
+    margin: 0.6rem 0;
+    padding: 0.5rem 1.2rem;  /*altura e largura dos inputs, respectivamente*/
+    border-radius: 10px;
+    box-shadow:1px 1px 5px #3378c7;
+
+    
+}
+
+/* Ao passar o mouse, a aparece essa cor nos campos */
+.caixa-input input:hover{
+    background-color: #d6e7fc;
+}
+
+/* 
+.caixa-input input:focus-visible{
+    outline: 1px solid #ffffff;
+} */
+
+.caixa-input label {
+    font-size: 0,75rem;
+    font-size: 600;
+    color:#000000be
+}
+
+
+
+.botao-continuar button {
+    width: 50%;
+    margin-top: 2.5rem;
+    margin-left: 8.5rem;
+    border: none;
+    padding: 0.62rem;
+    background-color: rgb(7, 67, 136);
+    cursor: pointer;
+
+}
+
+.botao-continuar button:hover{
+    background-color: #6481e2;
+}
+
+.botao-continuar button a{
+    text-decoration: none;
+    font-size: 0.90rem;
+    color: beige;
+}
+
+
+
+/* Tornar o site responsivo */
+@media screen and (max-width: 1330px) {
+    .imagem{
+        display:none; /*tira a imagem*/
+    }
+
+    .container {
+        width: 50%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1064px) {
+    .container{
+        width: 50%;
+        height: 60%
+    }   
+    /* para colocar o scroll, fazer o seguinte: */
+    .grupo-input {
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 30rem;
+        padding-right: 5rem;
+    }
+
+    .botao-continuar {
+        padding-right: 10.70rem;
+        padding-bottom: 5rem;
+    }
+
+}
+
+@media screen and (max-width:860px){
+    .container {
+        width: 80%;
+        height: auto;
+    }
+
+    .grupo-input {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+
+    .botao-continuar {
+        padding-right: 10.70rem;
+        padding-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width:420px){
+    .container{
+        width: 70%;
+        height: auto;
+        
+    }
+
+    .cabecalho{
+        height: auto;
+        font-size: 0.5rem;
+    }
+
+    .grupo-input input {
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .grupo-input input {
+        
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 20rem;
+        padding-right: 10rem;
+        margin-left: 3.55rem;
+        width: 0.1rem;
+        
+    }
+
+    .grupo-input label {
+        font-size: 0.50rem;
+        padding: 0.5rem 2rem;
+        margin-left: 3.55rem;
+        
+    }
+
+    .botao-continuar {
+        padding-right: 10.70rem;
+        padding-bottom: 3rem;
+    }
+}
