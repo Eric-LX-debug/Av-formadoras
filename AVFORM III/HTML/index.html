@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de cadastro</title>
     <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../javascript/validacaocampos.js"></script>
    
 </head>
 <body>
@@ -18,8 +19,9 @@
         </div>
 
         <!--Div dos formulários -->
-        <div class="form"> 
-            <form action="#" onsubmit="return validarForm(event)">
+        <div class="formu"> 
+            <form onsubmit="validaForm(event)">
+
                 <div class="cabecalho">
                     <div class="titulo">
                         <h1>Cadastre-se</h1>
@@ -34,7 +36,7 @@
 
                     <div class="caixa-input">
                         <label for="Idade">Idade </label>
-                        <input id="Idade" type="text" name="Idade" placeholder="Digite sua idade" >
+                        <input id="idade" type="text" name="idade" placeholder="Digite sua idade" >
                     </div>
 
                     <div class="caixa-input">
@@ -65,11 +67,10 @@
 
                 
                 <div class="botao-continuar">
-                    <button id="botao-continuar"><a href="#">Continuar</a></button> <!--Colocar o link para se aberto no javascript-->
+                    <button type="submit" id="botao-continuar">Continuar</button> <!--Colocar o link para se aberto no javascript-->
                 </div>
             </form>
         </div>
     </div>
-    <script src="../JAVASCRIPT/validacao_campos.js"></script>
 </body>
 </html>
