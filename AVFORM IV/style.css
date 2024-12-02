@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    justify-content: start;
+    align-items: start;
+    font-family: Arial, sans-serif; /* Para melhorar a aparência geral */
+    background-image: url(landscape.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* A imagem se ajusta ao tamanho do body */
+    
+}
+
+img {
+    width: 500px;
+    
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.container {
+    /* Para que os elementos filhos nao herdem a opacidade, é só defini-la dentro do valor em rgb, no final */
+    background-color: rgba(33, 8, 48, 0.5); 
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+    margin-top: 1em;
+    width: 30%; /* Define uma largura máxima para o formulário */
+    padding: 1em;
+    padding-left: 2em;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1); /* Borda sombreada */
+}
+
+.caixa-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Espaçamento entre as caixas */
+}
+
+
+.select-group {
+    margin-left: 6em;
+    margin-bottom: 1em;
+}
+
+#genero{
+    width: 12em;
+}
+
+p {
+    display: inline;
+    color: rgb(151, 150, 150);
+    font-size: 17px;
+    margin-left: 0.2em;
+}
+
+select {
+    padding: 8px;
+    width: 46%;
+    border-radius: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+select:hover {
+    background-color:rgb(225, 227, 255);
+}
+
+label {
+    color: rgb(255, 255, 255);
+    width: 150px; /* Define uma largura fixa para alinhar os labels */
+    text-align: right; /* Alinha os labels à direita */
+    padding-right: 12px; /* Espaço entre o label e o input */
+    white-space: nowrap; /* Evita quebra de linha nos labels */
+}
+
+#data {
+    width: 39.5%;
+}
+
+input {
+    font-size: 15px;
+    width: 61.5%;/* Faz com que o input ocupe o restante do espaço */
+    padding: 8px; /* Adiciona espaçamento interno para os inputs */
+    border-radius: 10px;
+    border: none;
+    display: block;
+    flex-direction: column;
+}
+
+input:hover{
+    background-color: rgb(225, 227, 255);
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+.botoes {
+    display: flex;
+    margin-top: 2em;
+    
+}  
+
+input:focus, select:focus{
+    outline: 2px solid #8087ee; /* Substitui a borda preta por uma azul */
+}
+
+button {
+    font-size: 16px;
+    margin-left: 2.5%;
+    padding: 0.8em;
+    width: 45%;
+    border-radius: 10px;
+    border: solid 1px rgb(255, 255, 255);
+    background: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    color: white;
+}
+
+
+button:hover {
+    background-color: rgb(108, 35, 156);
+    color: white;
+}
+
+
+#termo-check {
+    width: 15px;
+    height: 15px;
+    margin-left: 8em;
+    background-color: #8087ee;
+    color: #8087ee;
+    display: inline-block;
+}
+
+#texto-termo {
+    color: rgb(255, 255, 255);
+}
+
+input[type="checkbox"] {
+    accent-color: rgb(90, 21, 180);  /* Altere a cor para o verde, por exemplo */
+    border: none;
+}
+
+#login {
+    text-transform:uppercase
+  }
+
+#login::placeholder{
+    text-transform: lowercase;
+}
+
+/* formatação dos erros */
+
+.error {
+    font-size: 13px;
+    background-color: rgb(156, 19, 19, 0.5);
+    color: rgb(255, 255, 255);
+    padding: 0.5em;
+    padding-left: 1em;
+    margin: 0.5em;
+    display: none;
+    border: solid 2px red;
+    text-align: center;
+}
+/* XXXXXXXXXXXXXXXXXXX Design responsivo XXXXXXXXXXXXXXXXXXXXXXXX */
+
+/*Responsividade*/
+/*Computadores*/
+@media only screen and (max-width: 1280px) {
+
+    .select-group {
+        margin-bottom: 1em;
+        margin: 0;
+    }
+
+    #genero{
+        max-width: 12em;
+        display: block;
+    }
+
+    .caixa-input {
+        display: block;
+        align-items: center;
+        margin-bottom: 15px; /* Espaçamento entre as caixas */
+    }
+
+    .container {
+    margin-left: 2em;
+    margin-top: 2.5em;
+    width: 30%; /* Define uma largura máxima para o formulário */
+    padding: 1em;
+    padding-left: 2em;
+    }
+    
+    #termo-check {
+        margin: 1em;
+    }
+
+}
+
+
+/*Tablets*/
+@media only screen and (max-width: 912px){
+
+    body {
+        display: flex;
+        height: 100%;
+        justify-content: start;
+        align-items: start;
+        font-family: Arial, sans-serif; /* Para melhorar a aparência geral */
+        background-image: url(landscape.jpg);
+        background-repeat: no-repeat;
+       
+         
+    }
+    
+   
+    .container {
+        max-height: 100em;
+        min-width: 87%;
+        padding: 2em;
+    }
+
+    #termo-check {
+        margin: 1em;
+    }
+}
+
+
+
+/*Celulares*/
+@media only screen and (max-width: 450px) {
+
+    body {
+        min-height: 100vh; /* Garante que o body sempre ocupe pelo menos 100% da altura do viewport */
+        background-image: url('landscape.jpg'); /* Substitua pelo caminho correto */
+        background-repeat: no-repeat;
+        background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+        background-position: center; /* Centraliza a imagem */
+    }
+
+    .container {
+        min-height: 100em; /* Ajuste conforme necessário para o conteúdo */
+        width: 100%; /* Pode usar "width" ao invés de "min-width" se for fixo */
+        padding: 1em;
+        margin: 0 auto; /* Centraliza o container */
+    }
+
+    #termo-check {
+        margin: 1em;
+    }
+    
+    #texto-termo {
+        color: rgb(255, 255, 255);
+    }
+
+}
+
+
+
+
+
+@media only screen and (max-width: 390px) {
+    
+
+
+    .container {
+        height: 100vh; /* Ajuste conforme necessário para o conteúdo */
+        width: 100%; /* Pode usar "width" ao invés de "min-width" se for fixo */
+        padding: 1em;
+    
+    }
+
+
+    select {
+        width: 60%;
+    }
+
+    #data{
+        display: block;
+        max-width: 50%;
+        
+    }
+
+  input {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+  }
+  
+
+  
+
+    .botoes {
+        width: 100%;
+    }
+
+}
