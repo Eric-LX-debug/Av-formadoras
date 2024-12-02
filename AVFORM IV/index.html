@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário de cadastro</title>
+</head>
+<body>
+    <section class="container">
+        <header class="title">
+        <h1>Cadastro de usuário</h1>
+        </header>
+        <form action="#" id="form">
+            <div class="grupo-input">
+                <div class="caixa-input">
+                    <!-- Os campos 'Nome' e 'Nome Materno' devem ser preenchidos com, no mínimo, dez caracteres 
+                    alfabéticos, incluindo espaços. É essencial que o primeiro caractere de cada campo seja uma letra 
+                    maiúscula. -->
+                    <label for="nome">Nome</label> 
+                    <input id="nome" placeholder="Digite seu nome completo"> <p> * </p>
+                </div>
+                <div id="nomeError" class="error"> O nome deve ter no mínimo 10 caracteres alfabéticos e começar com letra maiúscula.</div>
+                <div class="caixa-input">
+                    <label for="data">Data de nascimento</label>
+                    <input id="data" type="date" placeholder="Digite sua idade"> <p>*</p>
+                </div> 
+                <div id="dataError" class="error">Por favor, insira sua data de nascimento.</div>
+                <div id="dataError2" class="error">Você precisa ter 18 anos ou mais para se cadastrar.</div>
+                <div class="select-group">
+                    <label for="genero"> Sexo</label>
+                    <select name="options" id="genero" placeholder="Selecione">
+                        <option value="0">Selecione</option>
+                        <option value="1">Feminino</option>
+                        <option value="2">Masculino</option>
+                        <option value="3">Prefiro não informar</option>
+                    </select> <p>*</p>
+                </div>
+                <div class="caixa-input">
+                    <!-- Os campos 'Nome' e 'Nome Materno' devem ser preenchidos com, no mínimo, dez caracteres 
+                    alfabéticos, incluindo espaços. É essencial que o primeiro caractere de cada campo seja uma letra 
+                    maiúscula. -->
+                    <label for="nome-materno">Nome materno</label>
+                    <input id="nome-materno" placeholder="Digite o nome da sua mãe"> <p>*</p>
+                </div>
+                <div id="nomeMaternoError" class="error">O nome materno deve ter no mínimo 10 caracteres alfabéticos e começar com letra maiúscula.</div>
+                </div>
+                <div class="caixa-input">
+                    <!-- O campo CPF deve ter separação por “.” e “-“ conforme exemplo a seguir: 031.203.786-14
+                     -->
+                    <label for="CPF">CPF</label>
+                    <input id="CPF" type="text"placeholder="Digite seu CPF" maxlength="14" autocomplete="off"> <p>*</p>  
+                </div>
+                <div id="cpfError" class="error">CPF inválido! Verifique os dados informados.</div>
+                <div class="caixa-input">
+                    <label for="telefoneCel">Telefone Celular</label>
+                    <input id="telefoneCel" type="text" placeholder="(XX) X XXXX-XXXX" oninput="mascaraCel(this)"> <p>*</p>
+                </div>
+                <div id="telcelError" class="error">Preenche seu número de telefone</div>
+                <div class="caixa-input">
+                    <label for="tel-Fixo">Telefone Fixo</label>
+                    <input id="tel-Fixo" type="text" placeholder="(XX) XXXX-XXXX" oninput="telFixo(this)">
+                </div>
+                <div id="telfixoError" class="error">O primeiro número da sequência de cinco dígitos tem que começar exclusivamente com um
+                    dos seguintes valores: 2, 3, 4 ou 5.</div>
+                </div>
+                <div class="caixa-input">
+                    <label for="endereco">Endereço completo</label>
+                    <input id="endereco" type="text" placeholder="Digite seu endereço completo">
+                </div>
+                <div id="enderecoError" class="error">O endereço deve iniciar com 'Rua', 'Avenida', 'Travessa' ou 'Av.' e ter pelo menos 10 caracteres alfanuméricos.</div>
+                <div class="caixa-input">
+                    <label for="login">Login</label>
+                    <input id="login" type="text" placeholder="Crie um login"> <p>*</p>
+                </div>
+                <div id="nomeUsuarioError" class="error">Seu nome de usuário deve ter exatamente 5 caracteres e conter apenas letras e espaços.</div>
+                <div class="caixa-input">
+                    <label for="senha">Senha</label>
+                    <input id="senha" type="password" name="senha" placeholder="Crie uma senha"> <p>*</p>
+                </div>
+                <div id="senhaError" class="error">Senha inválida! Deve conter exatamente 7 caracteres alfanuméricos.</div>
+                <div id="confirmasenhaError" class="error">As senhas não coincidem</div>
+                <div class="caixa-input">
+                    <label for="confirmasenha">Confirme a senha</label> 
+                    <input id="confirmasenha" type="password" name="confirmasenha" placeholder="Confirme a senha"> <p>*</p>
+                </div> 
+                <div id="confirmaSenhaError" class="error">As senhas não coincidem</div>
+            </div>
+            <div class="termo">
+                <input type="checkbox" id="termo-check"> <p id="texto-termo" >Aceito os Termos e condições</p>
+            </div>
+            <div id="termoError" class="error">Você precisa aceitar os termos e condições para prosseguir</div>
+            <div class="botoes">
+                <button type="reset" id="botao-limpar">Limpar</button>
+                <button type="submit" id="botao-enviar">Enviar</button> <!--Colocar o link para se aberto no javascript-->
+            </div>
+        </form>
+        <script src="script.js"></script>
+    </section>
+
+</body>
+</html>
